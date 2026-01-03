@@ -1,9 +1,12 @@
 # Phase 1 Evidence Document
 ## LM Pizzeria - React Frontend Implementation
 
-**Student:** Lamia Tamassry  
+**Student:** Lamita Masry  
+**Course:** CSCI 426 - WEH Advanced  
+**Instructor:** Prof. Fouad Najem  
+**Term:** Spring 2026  
 **Project:** LM Pizzeria Restaurant Ordering System  
-**Date:** December 29, 2025  
+**Date:** January 2026  
 **Live Demo:** https://lmpizzeria.netlify.app/
 
 ---
@@ -163,8 +166,8 @@ export default {
 **Requirement:** Project must use Git for version control with meaningful commit history.
 
 **Evidence:**
-- **Repository:** https://github.com/Lamitamassry/lmpizzeria
-- **Git Configuration:**
+- **Repository:** <https://github.com/Lamitamassry/lm-pizzeria>
+- **Git Configuration:******
   - [.gitignore](../../.gitignore) file present
   - Excludes: `node_modules/`, `.env`, `dist/`
 - **Commit History:** Multiple commits documenting development phases
@@ -354,5 +357,5 @@ All files referenced in this document exist in the repository and can be verifie
 ---
 
 **Document Version:** 1.0  
-**Last Updated:** December 29, 2025  
-**Prepared By:** Lamia Tamassry
+**Last Updated:** January 2026  
+**Prepared By:** Lamita Masry

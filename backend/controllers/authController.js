@@ -15,7 +15,7 @@ export const signup = async (req, res) => {
 
         // Validation
         if (!name || !email || !password) {
-            return res.status(400).json({ 
+            return res.status(400).json({
                 message: 'All fields are required',
                 details: 'Please provide name, email, and password'
             });
@@ -24,15 +24,15 @@ export const signup = async (req, res) => {
         // Email format validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            return res.status(400).json({ 
-                message: 'Invalid email format' 
+            return res.status(400).json({
+                message: 'Invalid email format'
             });
         }
 
         // Password strength validation
         if (password.length < 6) {
-            return res.status(400).json({ 
-                message: 'Password must be at least 6 characters long' 
+            return res.status(400).json({
+                message: 'Password must be at least 6 characters long'
             });
         }
 
@@ -43,7 +43,7 @@ export const signup = async (req, res) => {
         );
 
         if (existingUsers.length > 0) {
-            return res.status(409).json({ 
+            return res.status(409).json({
                 message: 'Email already registered',
                 details: 'Please use a different email or login instead'
             });
@@ -84,7 +84,7 @@ export const signup = async (req, res) => {
             code: error.code,
             sqlMessage: error.sqlMessage
         });
-        return res.status(500).json({ 
+        return res.status(500).json({
             message: 'Error creating user account',
             details: process.env.NODE_ENV === 'development' ? error.message : 'Please try again later'
         });
@@ -101,8 +101,8 @@ export const login = async (req, res) => {
 
         // Validation
         if (!email || !password) {
-            return res.status(400).json({ 
-                message: 'Email and password are required' 
+            return res.status(400).json({
+                message: 'Email and password are required'
             });
         }
 
@@ -113,8 +113,8 @@ export const login = async (req, res) => {
         );
 
         if (users.length === 0) {
-            return res.status(401).json({ 
-                message: 'Invalid email or password' 
+            return res.status(401).json({
+                message: 'Invalid email or password'
             });
         }
 
@@ -124,8 +124,8 @@ export const login = async (req, res) => {
         const isPasswordValid = await bcrypt.compare(password, user.password);
 
         if (!isPasswordValid) {
-            return res.status(401).json({ 
-                message: 'Invalid email or password' 
+            return res.status(401).json({
+                message: 'Invalid email or password'
             });
         }
 
@@ -153,7 +153,7 @@ export const login = async (req, res) => {
             code: error.code,
             sqlMessage: error.sqlMessage
         });
-        return res.status(500).json({ 
+        return res.status(500).json({
             message: 'Error logging in',
             details: process.env.NODE_ENV === 'development' ? error.message : 'Please try again later'
         });
@@ -174,8 +174,8 @@ export const getProfile = async (req, res) => {
         );
 
         if (users.length === 0) {
-            return res.status(404).json({ 
-                message: 'User not found' 
+            return res.status(404).json({
+                message: 'User not found'
             });
         }
 
@@ -185,8 +185,8 @@ export const getProfile = async (req, res) => {
 
     } catch (error) {
         console.error('Get profile error:', error);
-        return res.status(500).json({ 
-            message: 'Error fetching user profile' 
+        return res.status(500).json({
+            message: 'Error fetching user profile'
         });
     }
 };

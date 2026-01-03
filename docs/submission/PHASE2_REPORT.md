@@ -4,15 +4,15 @@
 
 ---
 
-**Course:** Web Development  
-**Instructor:** [Instructor Name]  
-**Semester:** Fall 2025  
-**Student Name:** Lamia Tamassry  
-**Date:** December 29, 2025  
+**Course:** CSCI 426 - WEH Advanced  
+**Instructor:** Prof. Fouad Najem  
+**Semester:** Spring 2026  
+**Student Name:** Lamita Masry  
+**Date:** January 2026  
 
 **Frontend URL:** <https://lmpizzeria.netlify.app/>  
 **Backend URL:** *[To be added after Railway/Render deployment]*  
-**GitHub Repository:** <https://github.com/Lamitamassry/lmpizzeria>
+**GitHub Repository:** <https://github.com/Lamitamassry/lm-pizzeria>
 
 ---
 
@@ -1980,7 +1980,7 @@ The development process involved extensive use of official documentation, tutori
 - MDN Web Docs: <https://developer.mozilla.org/>
 - Railway Documentation: <https://docs.railway.app/>
 - Render Documentation: <https://render.com/docs>
-- GitHub Repository: <https://github.com/Lamitamassry/lmpizzeria>
+- GitHub Repository: <https://github.com/Lamitamassry/lm-pizzeria>
 
 ---
 
@@ -2050,6 +2050,6 @@ INSERT INTO order_items (order_id, item_name, item_price, quantity) VALUES
 
 **End of Report**
 
-**Submitted by:** Lamia Tamassry  
-**Date:** December 29, 2025  
+**Submitted by:** Lamita Masry  
+**Date:** January 2026  
 **Word Count:** ~11,000 words

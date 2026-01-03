@@ -163,7 +163,7 @@ npm run dev
 ## 📋 Project Structure
 
 ```
-lmpizzeria/
+lami/
 ├── backend/                    # Node.js + Express backend
 │   ├── server.js              # Main server file
 │   ├── controllers/           # Business logic
@@ -214,7 +214,7 @@ lmpizzeria/
 
 ### Backend Features
 
-- RESTful API (8 endpoints)
+- RESTful API (10 endpoints)
 - MySQL database (3 related tables)
 - User authentication (JWT)
 - Full CRUD for orders
@@ -386,7 +386,7 @@ lmpizzeria/
 
 ### GitHub Repository
 
-- URL: <https://github.com/Lamitamassry/lmpizzeria>
+- URL: <https://github.com/Lamitamassry/lm-pizzeria>
 - Issues: Report problems via GitHub Issues
 - Pull requests: Welcome for improvements
 
@@ -431,6 +431,8 @@ Your project is **production-ready** and **academically sound**. It demonstrates
 ---
 
 **Project:** LM Pizzeria  
-**Student:** Lamia Tamassry  
-**Course:** CSCI 426 - Web Development  
+**Student:** Lamita Masry  
+**Course:** CSCI 426 - WEH Advanced  
+**Instructor:** Prof. Fouad Najem  
+**Term:** Spring 2026  
 **Status:** ✅ Ready for Submission

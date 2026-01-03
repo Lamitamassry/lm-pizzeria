@@ -31,6 +31,15 @@ app.get('/api/health', (req, res) => {
     });
 });
 
+// Root route
+app.get("/", (req, res) => {
+  res.json({
+    app: "LM Pizzeria API",
+    status: "running",
+    health: "/api/health"
+  });
+});
+
 // 404 handler - must come after all routes
 app.use(notFoundHandler);
 

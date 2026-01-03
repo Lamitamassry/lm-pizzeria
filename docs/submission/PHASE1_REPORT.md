@@ -4,14 +4,14 @@
 
 ---
 
-**Course:** Web Development  
-**Instructor:** [Instructor Name]  
-**Semester:** Fall 2025  
-**Student Name:** Lamia Tamassry  
-**Date:** December 29, 2025  
+**Course:** CSCI 426 - WEH Advanced  
+**Instructor:** Prof. Fouad Najem  
+**Semester:** Spring 2026  
+**Student Name:** Lamita Masry  
+**Date:** January 2026  
 
 **Live Demo:** <https://lmpizzeria.netlify.app/>  
-**GitHub Repository:** <https://github.com/Lamitamassry/lmpizzeria>
+**GitHub Repository:** <https://github.com/Lamitamassry/lm-pizzeria>
 
 ---
 
@@ -454,9 +454,9 @@ Menu and content grids adapt from single column on mobile to multi-column on lar
 
 The project uses Git for version control with a repository hosted on GitHub. The commit history documents the development process from initial setup through feature implementation.
 
-**Repository:** <https://github.com/Lamitamassry/lmpizzeria>
+**Repository:** <https://github.com/Lamitamassry/lm-pizzeria>
 
-**Branch Strategy:**
+**Branch Strategy:****
 
 - `main` - Production-ready code
 - Feature branches for major changes (if applicable)
@@ -704,7 +704,7 @@ The use of modern development tools and official documentation enhanced producti
 - Tailwind CSS Documentation: <https://tailwindcss.com/docs>
 - Vite Documentation: <https://vitejs.dev/>
 - MDN Web Docs: <https://developer.mozilla.org/>
-- GitHub Repository: <https://github.com/Lamitamassry/lmpizzeria>
+- GitHub Repository: <https://github.com/Lamitamassry/lm-pizzeria>
 
 ---
 
@@ -713,7 +713,7 @@ The use of modern development tools and official documentation enhanced producti
 ### Appendix A: Project Structure
 
 ```
-lmpizzeria/
+lami/
 ├── index.html
 ├── package.json
 ├── vite.config.js
@@ -772,6 +772,6 @@ lmpizzeria/
 
 **End of Report**
 
-**Submitted by:** Lamia Tamassry  
-**Date:** December 29, 2025  
+**Submitted by:** Lamita Masry  
+**Date:** January 2026  
 **Word Count:** ~4,500 words

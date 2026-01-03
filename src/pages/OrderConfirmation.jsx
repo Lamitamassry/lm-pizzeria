@@ -10,6 +10,9 @@ const OrderConfirmation = () => {
     const navigate = useNavigate();
     const orderDetails = location.state?.orderDetails;
 
+    // Safe number conversion to prevent toFixed errors
+    const totalNumber = Number(orderDetails?.total ?? 0);
+
     // Redirect to home if no order details
     useEffect(() => {
         if (!orderDetails) {
@@ -90,11 +93,11 @@ const OrderConfirmation = () => {
                                     <div className="flex-grow">
                                         <p className="text-gray-100 font-medium">{item.name}</p>
                                         <p className="text-gray-500 text-sm">
-                                            ${item.price.toFixed(2)} × {item.quantity}
+                                            ${Number(item.price ?? 0).toFixed(2)} × {item.quantity}
                                         </p>
                                     </div>
                                     <p className="text-gray-100 font-semibold">
-                                        ${(item.price * item.quantity).toFixed(2)}
+                                        ${(Number(item.price ?? 0) * Number(item.quantity ?? 0)).toFixed(2)}
                                     </p>
                                 </div>
                             ))}
@@ -105,16 +108,16 @@ const OrderConfirmation = () => {
                     <div className="space-y-2 pt-4 border-t border-charcoal-light">
                         <div className="flex justify-between text-gray-400">
                             <span>Subtotal</span>
-                            <span>${orderDetails.total.toFixed(2)}</span>
+                            <span>${totalNumber.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between text-gray-400">
                             <span>Tax</span>
-                            <span>${(orderDetails.total * 0.08).toFixed(2)}</span>
+                            <span>${(totalNumber * 0.08).toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between text-2xl font-bold text-gray-100 pt-2">
                             <span>Total</span>
                             <span className="text-accent-rose">
-                                ${(orderDetails.total * 1.08).toFixed(2)}
+                                ${(totalNumber * 1.08).toFixed(2)}
                             </span>
                         </div>
                     </div>

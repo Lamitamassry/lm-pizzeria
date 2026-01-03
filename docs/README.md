@@ -1,43 +1,43 @@
 # LM Pizzeria – Full-Stack Restaurant Ordering System
 
-A full-stack web application for a pizzeria restaurant with user authentication, menu browsing, shopping cart, and order management. Uses React for the frontend and Node.js with MySQL for the backend.
+A modern, full-stack web application for a luxury pizzeria brand, featuring user authentication, online menu browsing, shopping cart, order management, and a complete backend with MySQL database.
 
 **Phase 1:** React frontend with responsive design  
 **Phase 2:** Node.js + Express backend with MySQL, JWT authentication, and CRUD operations
 
-Developed for CSCI 426 - WEH Advanced  
-**Student:** Lamita Masry | **Instructor:** Prof. Fouad Najem | **Term:** Spring 2026
+This project was developed as part of a university web development course (CSCI 426 – Advanced Web Development).
 
 ---
 
-## Live Demo
+## 🚀 Live Demo
 
-**Frontend:** <https://lmpizzeria.netlify.app/>  
-**Backend:** Can be deployed on Railway or Render
+**Frontend:** Deployed on Netlify  
+**Backend:** Production-ready for Railway/Render deployment
 
 ---
 
-## Overview
+## 📌 Overview
 
-This is a restaurant ordering system where users can browse a menu, add items to a cart, and place orders. The system includes user authentication and order management.
+LM Pizzeria is a full-stack restaurant ordering system providing a complete customer experience from browsing to order management.
 
-### Features
+### Customer Features
 
-- User signup and login with JWT authentication
-- Menu browsing with pizzas, sides, desserts, and drinks
-- Responsive design that works on mobile, tablet, and desktop
-- Shopping cart with localStorage persistence
-- Order history and management
-- Order confirmation page
+- 🔐 **User Authentication** - Secure signup and login with JWT
+- 🍕 **Browse Menu** - Gourmet pizzas, sides, desserts, and drinks
+- 📱 **Responsive Design** - Perfect on mobile, tablet, and desktop
+- 🛒 **Shopping Cart** - Persistent cart with localStorage
+- 📋 **Order Management** - View and manage order history
+- ✅ **Order Confirmation** - Detailed confirmation after checkout
 
-### Technical Implementation
+### Technical Features
 
 - RESTful API with 10 endpoints
-- MySQL database with 3 related tables (users, orders, order_items)
-- JWT authentication with bcrypt password hashing
-- Full CRUD operations on orders
+- MySQL database with 3 related tables
+- JWT-based authentication
+- Password hashing with bcrypt
+- Complete CRUD operations
 - Input validation and error handling
-- Modular code structure
+- Clean, modular code architecture
 
 ---
 
@@ -65,7 +65,7 @@ This is a restaurant ordering system where users can browse a menu, add items to
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
 ### Frontend
 
@@ -90,7 +90,7 @@ This is a restaurant ordering system where users can browse a menu, add items to
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -101,8 +101,8 @@ This is a restaurant ordering system where users can browse a menu, add items to
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPO_URL>
-cd lami
+git clone <repository-url>
+cd lmpizzeria
 ```
 
 ### 2. Setup Frontend
@@ -211,13 +211,14 @@ Backend runs on **<http://localhost:5000>**
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-lami/
+lmpizzeria/
 ├── backend/
-│   ├── server.js                 # Express server entry point
-│   ├── package.json              # Backend dependencies
+│   ├── app.js                   # Express app configuration
+│   ├── index.js                 # Server entry point
+│   ├── package.json             # Backend dependencies
 │   ├── .env.example             # Environment template
 │   ├── controllers/
 │   │   ├── authController.js    # User auth (signup/login)
@@ -227,44 +228,43 @@ lami/
 │   │   └── orders.js            # Order endpoints
 │   ├── middleware/
 │   │   ├── auth.js              # JWT verification
-│   │   └── errorHandler.js     # Error handling
+│   │   └── errorHandler.js      # Error handling
 │   └── db/
 │       ├── connection.js        # MySQL connection pool
 │       └── schema.sql           # Database schema
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx          # Navigation with auth state
+│   │   ├── Navbar.jsx           # Navigation with auth state
 │   │   ├── Footer.jsx
 │   │   └── MenuItemCard.jsx
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── About.jsx
 │   │   ├── Menu.jsx
-│   │   ├── MenuItemDetail.jsx  # Dynamic route (/menu/:id)
+│   │   ├── MenuItemDetail.jsx   # Dynamic route (/menu/:id)
 │   │   ├── Contact.jsx
-│   │   ├── Cart.jsx            # Cart with auth integration
-│   │   ├── Login.jsx           # User login
-│   │   ├── Signup.jsx          # User registration
-│   │   ├── Orders.jsx          # Order history & management
+│   │   ├── Cart.jsx             # Cart with auth integration
+│   │   ├── Login.jsx            # User login
+│   │   ├── Signup.jsx           # User registration
+│   │   ├── Orders.jsx           # Order history & management
 │   │   └── OrderConfirmation.jsx
 │   ├── context/
-│   │   └── CartContext.jsx     # Global cart state
+│   │   └── CartContext.jsx      # Global cart state
 │   ├── data/
-│   │   └── menuData.js         # Menu items
-│   ├── App.jsx                 # Main app with routing
-│   └── main.jsx                # React entry point
+│   │   └── menuData.js          # Menu items
+│   ├── App.jsx                  # Main app with routing
+│   └── main.jsx                 # React entry point
 ├── docs/
-│   ├── PHASE2_REPORT_CONTENT.md    # Complete Phase 2 report
-│   └── PHASE1_REPORT_FIXES.md      # Report update guide
-├── PHASE1_CHECKLIST.md          # Phase 1 compliance
-├── PHASE2_CHECKLIST.md          # Phase 2 compliance
+│   ├── README.md                # This file
+│   ├── submission/              # Phase reports
+│   └── screenshots/             # Project screenshots
 ├── .env.example
-└── README.md
+└── package.json
 ```
 
 ---
 
-## API Endpoints
+## 🔌 API Endpoints
 
 ### Authentication (Public)
 
@@ -288,14 +288,11 @@ lami/
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/` | Root endpoint - API info |
 | GET | `/api/health` | Server health check |
-
-**Total: 10 API Endpoints**
 
 ---
 
-## API Examples
+## 📝 API Examples
 
 ### Signup
 
@@ -379,7 +376,7 @@ curl -X DELETE http://localhost:5000/api/orders/1 \
 - id (PK, AUTO_INCREMENT)
 - name (VARCHAR 255)
 - email (VARCHAR 255, UNIQUE, INDEXED)
-- password_hash (VARCHAR 255)
+- password (VARCHAR 255)
 - created_at (TIMESTAMP)
 ```
 
@@ -422,8 +419,6 @@ users (1) ──< orders (many) ──< order_items (many)
 ## 🚀 Deployment
 
 ### Frontend (Netlify)
-
-**Current:** <https://lmpizzeria.netlify.app/>
 
 1. Build project:
 
@@ -601,20 +596,6 @@ curl -X POST http://localhost:5000/api/auth/signup \
   -d '{"name":"Test User","email":"test@example.com","password":"test123456"}'
 ```
 
-**Expected Output:**
-
-```json
-{
-  "message": "User registered successfully",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "user": {
-    "id": 1,
-    "name": "Test User",
-    "email": "test@example.com"
-  }
-}
-```
-
 **Expected Result:** ✅ Returns 201 with JWT token
 
 ### Test 5: User Login
@@ -623,16 +604,6 @@ curl -X POST http://localhost:5000/api/auth/signup \
 curl -X POST http://localhost:5000/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"test@example.com","password":"test123456"}'
-```
-
-**Expected Output:**
-
-```json
-{
-  "message": "Login successful",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "user": {...}
-}
 ```
 
 **Expected Result:** ✅ Returns 200 with JWT token
@@ -664,15 +635,6 @@ curl -X POST http://localhost:5000/api/orders \
 npm run dev
 ```
 
-**Expected Output:**
-
-```
-VITE v5.x.x  ready in xxx ms
-
-➜  Local:   http://localhost:5173/
-➜  Network: use --host to expose
-```
-
 **Expected Result:** ✅ Frontend accessible at <http://localhost:5173>
 
 ### Test 8: Frontend Pages
@@ -694,14 +656,14 @@ Visit these URLs and verify they load without errors:
 
 ### Test 9: End-to-End User Flow
 
-1. Open <http://localhost:5173/signup>
+1. Open signup page
 2. Create new account with unique email
-3. Verify redirect to /menu and token in localStorage (F12 → Application)
+3. Verify redirect to menu and token in localStorage (F12 → Application)
 4. Add items to cart from menu
-5. Go to /cart and verify items appear
+5. Go to cart and verify items appear
 6. Proceed to checkout (should be logged in)
-7. View orders at /orders
-8. Logout and login again at /login
+7. View orders page
+8. Logout and login again
 
 **Expected Result:** ✅ Complete flow works without errors
 
@@ -709,7 +671,7 @@ Visit these URLs and verify they load without errors:
 
 ```bash
 # Check password is hashed in database
-mysql -u pizzeria_app -p lm_pizzeria -e "SELECT id, name, email, LEFT(password, 10) as password_preview FROM users LIMIT 1;"
+mysql -u root -p lm_pizzeria -e "SELECT id, name, email, LEFT(password, 10) as password_preview FROM users LIMIT 1;"
 ```
 
 **Expected Output:** Password should start with `$2b$10$` (bcrypt hash)
@@ -746,15 +708,6 @@ Total: **10 pages** (exceeds Phase 1 requirement of 5)
 8. **Signup** (`/signup`) - User registration
 9. **Orders** (`/orders`) - Order history
 10. **Order Confirmation** (`/order-confirmation`) - Post-order summary
-
----
-
-## 📖 Documentation
-
-- **[PHASE1_CHECKLIST.md](PHASE1_CHECKLIST.md)** - Phase 1 requirement compliance
-- **[PHASE2_CHECKLIST.md](PHASE2_CHECKLIST.md)** - Phase 2 requirement compliance
-- **[docs/PHASE2_REPORT_CONTENT.md](docs/PHASE2_REPORT_CONTENT.md)** - Complete technical report
-- **[docs/PHASE1_REPORT_FIXES.md](docs/PHASE1_REPORT_FIXES.md)** - Report update guidelines
 
 ---
 
@@ -814,48 +767,37 @@ Edit `backend/db/schema.sql` and re-run migration.
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-This is a course project for CSCI 426.
-
----
-
-## License
-
-Educational use only.
+This is a university project. For issues or suggestions, please open a GitHub issue.
 
 ---
 
-## Author
+## 📄 License
 
-CSCI 426 - Web Development (Advanced)  
-December 2025
+Educational use only - CSCI 426 course project.
 
 ---
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - Course instructor and teaching assistants
-- React, Express, and MySQL documentation
-- Tailwind CSS documentation
-- Various online resources for JWT implementation
+- React, Express, MySQL documentation
+- Tailwind CSS framework team
+- JWT.io for authentication guidance
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
-Screenshots are organized in `docs/screenshots/` by phase. See [SCREENSHOTS_INDEX.md](docs/screenshots/SCREENSHOTS_INDEX.md) for details.
+See [docs/submission/](docs/submission/) directory for comprehensive documentation including:
 
----
-
-## Documentation
-
-Additional documentation in the `docs/` folder:
-
-- [COMPLIANCE_CHECKLIST.md](docs/COMPLIANCE_CHECKLIST.md) - Requirements checklist
-- [DEPLOYMENT_RAILWAY.md](docs/DEPLOYMENT_RAILWAY.md) - Backend deployment guide
-- [DEPLOYMENT_FRONTEND.md](docs/DEPLOYMENT_FRONTEND.md) - Frontend deployment guide
+- All 10 pages (desktop & mobile views)
+- Database schema diagrams
+- API testing demonstrations
+- Authentication flow walkthrough
+- Order management screenshots
 
 ---
 
-**Status:** Complete - meets Phase 1 and Phase 2 requirements
+**Project Status:** ✅ Complete - Fully compliant with Phase 1 and Phase 2 requirements

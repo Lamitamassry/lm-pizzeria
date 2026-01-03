@@ -1,9 +1,12 @@
 # Phase 2 Evidence Document
 ## LM Pizzeria - Backend with MySQL & Authentication
 
-**Student:** Lamia Tamassry  
+**Student:** Lamita Masry  
+**Course:** CSCI 426 - WEH Advanced  
+**Instructor:** Prof. Fouad Najem  
+**Term:** Spring 2026  
 **Project:** LM Pizzeria Restaurant Ordering System  
-**Date:** December 29, 2025  
+**Date:** January 2026  
 **Frontend URL:** https://lmpizzeria.netlify.app/  
 **Backend URL:** *To be deployed on Railway/Render*
 
@@ -1062,5 +1065,5 @@ All files referenced in this document exist in the repository and can be verifie
 ---
 
 **Document Version:** 1.0  
-**Last Updated:** December 29, 2025  
-**Prepared By:** Lamia Tamassry
+**Last Updated:** January 2026  
+**Prepared By:** Lamita Masry
