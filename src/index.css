@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles - sets up dark background and text color */
+@layer base {
+    body {
+        @apply bg-primary text-gray-100 antialiased;
+        background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d2d2d 100%);
+        background-attachment: fixed;
+    }
+}
+
+/* Reusable component classes */
+@layer components {
+
+    /* Main button style with rose gradient */
+    .btn-primary {
+        @apply px-6 py-3 bg-gradient-to-r from-accent-rose to-accent-pink text-white font-semibold rounded-lg shadow-lg hover:shadow-accent-rose/50 transform hover:-translate-y-0.5 transition-all duration-300;
+    }
+
+    /* Secondary button with outline style */
+    .btn-secondary {
+        @apply px-6 py-3 bg-charcoal text-gray-100 font-semibold rounded-lg border-2 border-accent-rose/30 hover:border-accent-rose hover:shadow-lg hover:shadow-accent-rose/30 transform hover:-translate-y-0.5 transition-all duration-300;
+    }
+
+    /* Card component with dark background and border */
+    .card {
+        @apply bg-charcoal/50 backdrop-blur-sm border border-charcoal-light rounded-xl shadow-xl hover:shadow-2xl hover:shadow-accent-rose/10 transition-all duration-300;
+    }
+
+    /* Hover effect for cards */
+    .card-hover {
+        @apply transform hover:-translate-y-1 hover:border-accent-rose/50;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff6b9d, #ff8fb3);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ff8fb3, #ff6b9d);
+}
