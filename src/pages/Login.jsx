@@ -1,7 +1,12 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+// API URL must be set via VITE_API_URL environment variable
+const API_URL = import.meta.env.VITE_API_URL;
+
+if (!API_URL) {
+    console.error('VITE_API_URL environment variable is not set');
+}
 
 /**
  * Login Page
@@ -39,19 +44,34 @@ function Login() {
             });
 
             const data = await response.json();
+            console.log('LOGIN RESPONSE:', data);
 
             if (!response.ok) {
                 throw new Error(data.message || 'Login failed');
             }
 
+            // Extract token (check multiple possible field names)
+            const token = data.token ?? data.accessToken ?? data.jwt;
+            
+            if (!token) {
+                throw new Error('No token in login response');
+            }
+
             // Store token and user info
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('user', JSON.stringify(data.user));
+            localStorage.setItem('token', token);
+            localStorage.setItem('user', JSON.stringify(data.user ?? {}));
+            
+            console.log('Token stored:', token);
+            console.log('User stored:', data.user);
 
             // Redirect to menu or previous page
             navigate('/menu');
+            
+            // Force page reload to update navbar state
+            window.location.reload();
 
         } catch (err) {
+            console.error('Login error:', err);
             setError(err.message);
         } finally {
             setLoading(false);
