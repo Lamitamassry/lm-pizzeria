@@ -11,11 +11,27 @@ dotenv.config();
 // Create Express application
 const app = express();
 
+// CORS Configuration - Must be before routes
+const allowedOrigins = [
+    "https://lmpizzeria.netlify.app",
+    "http://localhost:5173",
+];
+
+const corsOptions = {
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true); // allow Postman/server-to-server
+        if (allowedOrigins.includes(origin)) return callback(null, true);
+        return callback(new Error("CORS blocked for origin: " + origin));
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: false,
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
+
 // Middleware
-app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-    credentials: true
-}));
 app.use(express.json());
 
 // API Routes
