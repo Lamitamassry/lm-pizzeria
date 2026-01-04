@@ -1,6 +1,10 @@
 # Project Finalization Report
 
-Date: December 24, 2025
+**Student:** Lamita Masry  
+**Course:** CSCI 426 - WEH Advanced  
+**Instructor:** Prof. Fouad Najem  
+**Term:** Spring 2026  
+**Date:** December 24, 2025
 
 ---
 
@@ -46,6 +50,7 @@ All endpoints are working and tested:
 **Authentication**
 - POST /api/auth/signup - Create new user account
 - POST /api/auth/login - Login and get JWT token
+- GET /api/auth/me - Get current user profile
 
 **Orders** (require authentication)
 - GET /api/orders - Get all orders for logged-in user

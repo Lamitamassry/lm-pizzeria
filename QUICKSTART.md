@@ -1,5 +1,13 @@
 # Quick Start Guide for LM Pizzeria Project
 
+**Student:** Lamita Masry  
+**Course:** CSCI 426 - WEH Advanced  
+**Instructor:** Prof. Fouad Najem  
+**Term:** Spring 2026  
+**Submission Date:** January 2026
+
+---
+
 ## ✅ Project Status: Ready for Submission
 
 Your project is now **fully compliant** with all Phase 1 and Phase 2 requirements. All AI references have been removed, unnecessary files deleted, and comprehensive documentation created.

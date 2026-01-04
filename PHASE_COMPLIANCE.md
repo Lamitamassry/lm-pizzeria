@@ -1,6 +1,10 @@
 # LM Pizzeria - Phase 1 & Phase 2 Compliance Checklist
 
-**Date:** January 3, 2026  
+**Student:** Lamita Masry  
+**Course:** CSCI 426 - WEH Advanced  
+**Instructor:** Prof. Fouad Najem  
+**Term:** Spring 2026  
+**Submission Date:** January 2026  
 **Status:** ✅ READY FOR SUBMISSION
 
 ---

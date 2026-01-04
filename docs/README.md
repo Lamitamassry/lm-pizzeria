@@ -266,6 +266,12 @@ lmpizzeria/
 
 ## 🔌 API Endpoints
 
+### General
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/` | API information |
+
 ### Authentication (Public)
 
 | Method | Endpoint | Description |

@@ -68,7 +68,7 @@ start http://localhost:5173
 
 ✅ **10 Pages** - Home, About, Menu, Menu Detail, Contact, Cart, Login, Signup, Orders, Confirmation  
 ✅ **1 Dynamic Route** - `/menu/:id`  
-✅ **8 API Endpoints** - Full REST API  
+✅ **10 API Endpoints** - Full REST API  
 ✅ **3 Database Tables** - users, orders, order_items  
 ✅ **JWT Authentication** - Secure login system  
 ✅ **Password Hashing** - bcrypt with 10 rounds  

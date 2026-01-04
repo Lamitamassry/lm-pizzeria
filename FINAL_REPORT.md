@@ -811,9 +811,28 @@ db.query(`SELECT * FROM users WHERE email = '${email}'`);  // NEVER DO THIS!
 - **Development:** `http://localhost:5000/api`
 - **Production:** `https://your-backend.railway.app/api`
 
+### General Endpoints
+
+#### 1. Root Endpoint
+
+**Endpoint:** `GET /`
+
+**Success Response (200):**
+
+```json
+{
+  "message": "LM Pizzeria API",
+  "version": "1.0.0",
+  "endpoints": {
+    "auth": ["/api/auth/signup", "/api/auth/login", "/api/auth/me"],
+    "orders": ["/api/orders"]
+  }
+}
+```
+
 ### Authentication Endpoints
 
-#### 1. User Signup
+#### 2. User Signup
 
 **Endpoint:** `POST /api/auth/signup`
 
@@ -847,7 +866,7 @@ db.query(`SELECT * FROM users WHERE email = '${email}'`);  // NEVER DO THIS!
 - `409` - Email already registered
 - `500` - Server error
 
-#### 2. User Login
+#### 3. User Login
 
 **Endpoint:** `POST /api/auth/login`
 
@@ -880,7 +899,7 @@ db.query(`SELECT * FROM users WHERE email = '${email}'`);  // NEVER DO THIS!
 - `401` - Invalid email or password
 - `500` - Server error
 
-#### 3. Get User Profile
+#### 4. Get User Profile
 
 **Endpoint:** `GET /api/auth/me`
 
@@ -911,7 +930,7 @@ Authorization: Bearer <jwt_token>
 
 ### Order Endpoints
 
-#### 4. Create Order
+#### 5. Create Order
 
 **Endpoint:** `POST /api/orders`
 
@@ -962,7 +981,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 
-#### 5. Get User Orders
+#### 6. Get User Orders
 
 **Endpoint:** `GET /api/orders`
 
@@ -997,7 +1016,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 
-#### 6. Get Single Order
+#### 7. Get Single Order
 
 **Endpoint:** `GET /api/orders/:id`
 
@@ -1030,7 +1049,43 @@ Authorization: Bearer <jwt_token>
 - `403` - Not authorized (not your order)
 - `404` - Order not found
 
-#### 7. Delete Order
+#### 8. Update Order
+
+**Endpoint:** `PUT /api/orders/:id`
+
+**Headers:**
+
+```
+Authorization: Bearer <jwt_token>
+```
+
+**Request Body:**
+
+```json
+{
+  "name": "John Doe",
+  "phone": "+1234567890",
+  "orderType": "takeaway",
+  "address": "123 Main St"
+}
+```
+
+**Success Response (200):**
+
+```json
+{
+  "message": "Order updated successfully",
+  "order": {...}
+}
+```
+
+**Error Responses:**
+
+- `401` - Not authenticated
+- `403` - Not authorized
+- `404` - Order not found
+
+#### 9. Delete Order
 
 **Endpoint:** `DELETE /api/orders/:id`
 
@@ -1048,7 +1103,9 @@ Authorization: Bearer <jwt_token>
 }
 ```
 
-#### 8. Health Check
+### Utility Endpoints
+
+#### 10. Health Check
 
 **Endpoint:** `GET /api/health`
 

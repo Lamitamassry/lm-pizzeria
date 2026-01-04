@@ -379,7 +379,7 @@ curl -X DELETE http://localhost:5000/api/orders/1 \
 - id (PK, AUTO_INCREMENT)
 - name (VARCHAR 255)
 - email (VARCHAR 255, UNIQUE, INDEXED)
-- password_hash (VARCHAR 255)
+- password (VARCHAR 255)
 - created_at (TIMESTAMP)
 ```
 

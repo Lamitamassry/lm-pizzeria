@@ -24,7 +24,7 @@ Complete guide for deploying the frontend to Netlify and backend to Railway or R
 
 1. Click "New Project"
 2. Select "Deploy from GitHub repo"
-3. Choose your `lmpizzeria` repository
+3. Choose your `lm-pizzeria` repository
 4. Railway will automatically detect it's a Node.js project
 
 ### Step 3: Add MySQL Database

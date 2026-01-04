@@ -1,7 +1,12 @@
 # LM Pizzeria - Phase 1 & Phase 2 Submission Summary
 
-**Date:** January 3, 2026  
-**Repository:** Available on GitHub  
+**Student:** Lamita Masry  
+**Course:** CSCI 426 - WEH Advanced  
+**Instructor:** Prof. Fouad Najem  
+**Term:** Spring 2026  
+**Submission Date:** January 2026  
+**Repository:** <https://github.com/Lamitamassry/lm-pizzeria>  
+**Live Demo:** <https://lmpizzeria.netlify.app/>  
 **Status:** ✅ READY FOR SUBMISSION
 
 ---
@@ -412,7 +417,8 @@ FRONTEND_URL=https://lmpizzeria.netlify.app
    - Location: `docs/screenshots/phase1/` and `docs/screenshots/phase2/`
 
 2. **Optional: Export PDF Report**
-   - If required: Follow guide in `docs/PDF_CONVERSION_GUIDE.md`
+   - Markdown is the primary format; PDF export is optional
+   - If desired: Follow guide in `docs/PDF_CONVERSION_GUIDE.md`
    - Primary deliverable is `FINAL_REPORT.md` (Markdown format)
    - PDF export is optional for convenience
 

@@ -49,6 +49,6 @@ CREATE TABLE order_items (
 -- Indexes: email, user_id, order_id, created_at for query optimization
 
 -- To create a test user, use the signup API endpoint or run:
--- INSERT INTO users (name, email, password_hash) VALUES
+-- INSERT INTO users (name, email, password) VALUES
 -- ('Test User', 'test@example.com', '$2b$10$<bcrypt_hashed_password>');
 -- Use bcrypt to hash passwords - never store plain text passwords
